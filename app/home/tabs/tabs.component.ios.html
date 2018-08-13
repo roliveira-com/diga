@@ -1,0 +1,19 @@
+<TabView [(ngModel)]="selectedIndex" iosIconRenderingMode="automatic" class="tab-view">
+  <StackLayout *tabItem="{title: 'Status', iconSource: 'res://tabs/status'}">
+    <Label text="Tab Status" textWrap="true"></Label>
+  </StackLayout>
+  <ng-template tabItem title="Chamadas" [iconSource]="selectedIndex === 1 ? 'res://tabs/calls-filled' : 'res://tabs/calls'"></ng-template>
+  <StackLayout *tabItem="{title: 'Camera', iconSource: 'res://tabs/camera'}">
+    <Label text="Tab Camera" textWrap="true"></Label>
+  </StackLayout>
+  <ng-template tabItem title="Conversas" [iconSource]="selectedIndex === 3 ? 'res://tabs/chats-filled' : 'res://tabs/chats'">
+    <StackLayout>
+      <ns-chats></ns-chats>
+    </StackLayout>
+  </ng-template>
+  <ng-template tabItem title="Configurações" [iconSource]="selectedIndex === 4 ? 'res://tabs/settings-filled' : 'res://tabs/settings'">
+    <StackLayout>
+      <Label text="Tab Configurações" textWrap="true"></Label>
+    </StackLayout>
+  </ng-template>
+</TabView>

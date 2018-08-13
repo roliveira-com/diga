@@ -1,0 +1,62 @@
+.listItemStackLayout {
+    align-content: center;
+    display: flex;
+    background-color: white;
+    padding: 10;
+}
+
+.labelName {
+    font-size: 20;
+    margin-bottom: 1;
+    vertical-align: middle; 
+}
+
+.labelTitle {
+    font-size: 14;
+    font-weight: bold;
+    vertical-align: middle; 
+}
+
+.labelText {
+    font-size: 12;
+    vertical-align: middle; 
+}
+
+.markViewStackLayout {
+    background-color: blue;
+    padding: 16
+}
+
+.deleteViewStackLayout {
+    background-color: #006968;
+    color: white;
+    padding: 16;
+}
+
+.gridLayoutLayout {
+    background-color: white;
+}
+
+.markViewStackLayout {
+    background-color: #006968;
+    color: white;
+    padding-left: 16;
+    padding-right: 16;
+}
+
+.swipetemplateLabel {
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.deleteViewStackLayout {
+    background-color: red;
+    padding-left: 16;
+    padding-right: 16;
+}
+
+.thumb{
+    border-radius: 50%;
+    margin-right: 15;
+    width: 50;
+}
