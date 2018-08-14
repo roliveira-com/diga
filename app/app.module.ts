@@ -1,5 +1,6 @@
 import { NgModule, NgModuleFactoryLoader, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
+import { NativeScriptUIListViewModule } from 'nativescript-ui-listview/angular'
 import * as platform from 'platform';
 
 import { AppRoutingModule } from "./app-routing.module";
@@ -13,7 +14,8 @@ import { AppComponent } from "./app.component";
     imports: [
         NativeScriptModule,
         AppRoutingModule,
-        CoreModule
+        CoreModule,
+        NativeScriptUIListViewModule,
     ],
     declarations: [
         AppComponent
