@@ -7,7 +7,6 @@ import { ChatsService } from './chats.service';
   imports: [
     NativeScriptModule,
   ],
-  declarations: [],
   providers: [
     ChatsService,
   ],
