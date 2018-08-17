@@ -6,3 +6,4 @@ export { ImageMessage } from './models/image-message.model';
 export { Chat } from './models/chat.model';
 export { Contact } from './models/contact.model';
 export { SentStatus } from './models/sent-status.model';
+export { NSshadow } from './models/ns-shadow.model';

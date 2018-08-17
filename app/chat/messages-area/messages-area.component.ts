@@ -1,11 +1,12 @@
-import { Component, AfterViewInit, Inject, Input, OnInit } from "@angular/core";
+import { Component, AfterViewInit, Inject, Input, OnInit, ChangeDetectionStrategy } from "@angular/core";
 import { Message, SentStatus } from "../../core";
 
 @Component({
   moduleId: module.id,
   selector: "ns-messages-area",
   templateUrl: "./messages-area.component.html",
-  styleUrls: ["./messages-area.component.css"]
+  styleUrls: ["./messages-area.component.css"],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MessagesAreaComponent implements OnInit, AfterViewInit {
   @Input() public messages: Message[];

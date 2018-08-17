@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, ChangeDetectionStrategy, AfterViewInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RouterExtensions } from 'nativescript-angular/router';
 
@@ -10,8 +10,9 @@ import { Message } from '../core/models/message.model';
   selector: 'ns-chat',
   templateUrl: './chat.component.html',
   styleUrls: ['./chat.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ChatComponent implements OnInit {
+export class ChatComponent implements OnInit, AfterViewInit {
 
   public chatIndex: number;
   public chat: Chat;
@@ -20,9 +21,6 @@ export class ChatComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private chatsService: ChatsService, public router: RouterExtensions, @Inject('platform') public platform) {
 
-  }
-
-  ngOnInit() {
     this.route.params.subscribe(params => {
       this.chatIndex = +params['index'];
       this.chat = this.chatsService.chats[this.chatIndex];
@@ -31,6 +29,12 @@ export class ChatComponent implements OnInit {
       this.unread = +params['unread'];
     });
     this.getMessages();
+  }
+
+  ngOnInit() {
+  }
+  
+  ngAfterViewInit(){   
   }
 
 

@@ -8,6 +8,8 @@ import { Component, OnInit, Inject, Input } from "@angular/core";
 })
 export class MessageBoxComponent implements OnInit {
 
+  constructor(@Inject('platform') public platform) { }
+
   ngOnInit(): void {
   }
 }
