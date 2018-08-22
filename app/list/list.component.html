@@ -1,3 +1,6 @@
+<ActionBar title="Chat" class="action-bar link">
+  <NavigationButton [text]="unread" icon="res://ic_arrow_back" (tap)="goBack()"></NavigationButton>
+</ActionBar>
 <GridLayout orientation="vertical" rows="auto, *" tkExampleTitle tkToggleNavButton>
   <RadListView #myListView [items]="chats" row="1" selectionBehavior="None" (itemSwipeProgressEnded)="onSwipeCellFinished($event)"
     (itemSwipeProgressStarted)="onSwipeCellStarted($event)" (itemSwipeProgressChanged)="onCellSwiping($event)" swipeActions="true">
