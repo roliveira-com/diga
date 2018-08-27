@@ -8,7 +8,6 @@ import { HomeRoutingModule } from "./home-routing.module";
 import { HomeComponent } from "./home.component";
 import { TabsComponent } from './tabs/tabs.component'
 import { ChatsComponent } from './chats/chats.component';
-import { ListComponent } from './list/list.component';
 import { ChatsService } from './chats/chats.service';
 
 @NgModule({
@@ -22,8 +21,7 @@ import { ChatsService } from './chats/chats.service';
     declarations: [
         HomeComponent,
         TabsComponent,
-        ChatsComponent,
-        ListComponent
+        ChatsComponent
     ],
     schemas: [
         NO_ERRORS_SCHEMA

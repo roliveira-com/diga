@@ -22,7 +22,7 @@ registerElement('Fab', () => Fab)
         NativeScriptUIListViewModule,
     ],
     declarations: [
-        AppComponent
+        AppComponent,
     ],
     providers:[
         { provide: 'platform', useValue: platform }

@@ -1,12 +1,10 @@
 import { Directive, ElementRef, HostListener, Input, AfterViewInit } from '@angular/core';
 import { Color } from 'color';
 
-import { NSshadow } from '../core'
-
 declare const android: any;
 declare const CGSizeMake: any;
 
-@Directive({ selector: '[nsShadow]' })
+@Directive({ selector: 'nsShadow' })
 
 export class NativeShadowDirective implements AfterViewInit {
   
